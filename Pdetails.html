@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="Styles/bootstrap.min.css">
+    <link rel="stylesheet" href="Js/bootstrap.min.js">
+    <link rel="stylesheet" href="Styles/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+    <script src="Js/jquery.min.js"></script>
+    <link rel="stylesheet" href="Styles/KvrdCss.css">
+
+    <link rel='dns-prefetch' href='//maps.googleapis.com'/>
+    <link rel='dns-prefetch' href='//maps.googleapis.com'/>
+    <script type='text/javascript'
+            src='https://maps.googleapis.com/maps/api/js?libraries=places%2Cgeometry&#038;v=3.exp&#038;key=AIzaSyA1hilSN_ofajUQZwnvQyZHU6ylNIE5K4Y&#038;ver=4.9.5'></script>
+    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCdbNGZNxXWApXH7VKPXkfE2tSqV4tYZ9o"
+            async="" defer="defer"></script>
+    <link rel="stylesheet" href="Styles/KCRD-rest.css">
+</head>
+<body>
+<div class="header">
+    <div id="close" class="close-bar">
+        <img src="https://image.ibb.co/m5HFiz/Group_1000.png" alt="logo" class="close-img"
+             style="margin: 10px 0px 10px 20px">
+        <a href="javascript:void(0)" class="sandwich-icon float-right" onclick="myFunction(this)"><i
+                class="fas fa-align-justify"></i></a>
+    </div>
+    <!--N A V B A R:I C O N S-->
+    <div class="web-container">
+        <div class="icons">
+            <div class="row justify-content-end">
+                <div>
+                    <a href="https://www.facebook.com/" class="icons-links"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/login?lang=en" class="icons-links"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/?hl=en" class="icons-links"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/" class="icons-links"><i class="fab fa-linkedin"></i></a>
+                    <span class="separator">|</span>
+                    <a href="#" class="pic"><img src="https://image.ibb.co/js0U18/Path_900.png"></a>
+                    <a href="#" class="text">LIVE CHAT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="separator separator2">
+    <div class="web-container">
+        <div class="navbar-collection" style="height:60px">
+            <div class="logo">
+                <img src="https://image.ibb.co/gaAJuT/Group_973.png" alt="logo"/>
+            </div>
+            <div class="nav-left">
+                <ul class="list">
+                    <li class="link-items hover-item"><a href="#" class="tabs">KVRD</a></li>
+                    <li class="link-items hover-item position-relative open-tip">
+                        <a href="#" class="tabs tool-tip">
+                            OUR PROJECTS
+                        </a>
+                        <div class="ul-parent">
+                            <ul class="tool-tiptext">
+                                <li class="tool-1"><a href="#">Commercial</a></li>
+                                <hr>
+                                <li class="tool-2"><a href="#">Residential</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="link-items hover-item"><a href="#" class="tabs">MEDIA CENTER</a></li>
+                    <li class="link-items hover-item"><a href="#" class="tabs">CAREERS</a></li>
+                    <li class="link-items hover-item"><a href="#" class="tabs">CONTACT US</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <input type="text" placeholder="Search" class="search-paragraph">
+                <button class="search-icon" type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--S A  N D W  I C H    O P E N-->
+<div class="sandwich-open" id="s-open" style="display: none">
+    <ul>
+        <li style="padding:10px 20px;">
+            <ul>
+                <li class="icon-list-left">
+                    <a href="https://www.facebook.com/" class="icon-links"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/login?lang=en" class="icon-links"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/?hl=en" class="icon-links"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/" class="icon-links"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li class="icon-list-right">
+                    <a href="#" class="resp-pic"><img src="https://image.ibb.co/js0U18/Path_900.png"></a>
+                    <a href="#" class="text">LIVE CHAT</a>
+                </li>
+
+            </ul>
+        </li>
+        <hr>
+        <li>
+            <input type="text" placeholder="Search" class="resp-search">
+            <button type="button" style="margin-top: 18px"><i class="fas fa-search"></i></button>
+            <hr>
+        </li>
+        <li style="padding:10px 20px;">
+            <a href="#" class="icon-links">KVRD</a>
+            <span class="float-right"  onclick="showDropdown(this)"><i class="fas fa-angle-down"></i></span>
+            <ul class="kvrd" id="kvrd" style=" display: none;">
+                <li><a href="#" class="kvrd-tab">Our Values</a></li>
+                <li><a href="#" class="kvrd-tab">The Essence Beyond</a></li>
+                <li><a href="#" class="kvrd-tab">Mission & Vision</a></li>
+                <li><a href="#" class="kvrd-tab">Story</a></li>
+            </ul>
+            <hr>
+        </li>
+        <li style="padding:10px 20px;">
+            <a href="#" class="icon-links">OUR PROJECTS</a>
+            <span class="float-right" onclick="projectsOpen(this)"><i class="fas fa-angle-down"></i></span>
+            <ul class="project" id="project" style=" display: none;">
+                <li><a href="#" class="kvrd-tab">Commercial</a></li>
+                <li><a href="#" class="kvrd-tab">Residential</a></li>
+            </ul>
+            <hr>
+        </li>
+        <li style="padding:10px 20px;">
+            <a href="#">MEDIA CENTER</a>
+            <hr>
+        </li>
+        <li style="padding:10px 20px;">
+            <a href="#">CAREERS</a>
+            <hr>
+        </li>
+        <li style="padding:10px 20px;">
+            <a href="#">CONTACT US</a>
+        </li>
+    </ul>
+</div>
+<!--M A I N-->
+<div class="main">
+    <!--H E A D E R-->
+    <div class="project-header">
+        <img src="https://image.ibb.co/mFO73z/architectural_design_architecture_building_532568.png" alt="Header"
+             class="img">
+        <div class="web-container">
+            <div class="div-project">
+                <img src="https://image.ibb.co/fwhs3z/Image_15.png" alt="log">
+            </div>
+        </div>
+    </div>
+    <div class="web-container">
+        <div class="why">
+            <p class="p1">WHY DO WE USE IT?</p>
+            <div class="p2">It is a long established fact that a reader will be distracted by the readable content of a
+                page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of letters, as opposed to using ‘Content here, content here’, making it look like
+            </div>
+            <img src="https://image.ibb.co/kJ5F6K/d4402ec53893f70e351e0628302864c2.png" alt="Why-use-it?"
+                 class="why-img img">
+            <p class="under-img">text, and a search for ‘lorem ipsum’ will uncover many web sites still in their
+                infancy. Various versions
+                have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the
+                like).</p>
+        </div>
+    </div>
+    <div>
+        <div id="googleMap" class="map">
+        </div>
+        <div class="web-container info">
+            <div class="location">
+                <div class="location-text">
+                    <h5>LOCATION</h5>
+                    <hr>
+                    <p>KVRD. California<br>34 Tesla, Ste 100<br> Irvine, Ca, USA 92618</p>
+                    <h6>For and information:</h6>
+                    <span>+ 2 0 1 0 9 3 0 5 7 4 2 9</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="web-container">
+        <div class="floor-plan">
+            <div class="floor-title">
+                <h5>FLOOR PLAN</h5>
+                <hr align="center">
+            </div>
+            <div class="center-content">
+                <div class="left-btn">
+                    <div class="floor-button"><a href="#">Floor Plan</a></div>
+                    <p>Not Available</p>
+                </div>
+                <div class="right-btn">
+                    <div class="floor-button"><a href="#">Brochure</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="web-container" style="position: relative">
+            <div class="left-gallery">
+                <h1>PHOTO GALLERY</h1>
+                <hr>
+                <div class="triangle-right" id="first-triangle"></div>
+                <h5 id="project-design" onclick="choose()">Project design</h5><br>
+                <div class="triangle-right" id="second-triangle"></div>
+                <h5 id="con-design" onclick="choose2()">construction progress</h5>
+            </div>
+            <div class="right-gallery">
+                <div id="s1">
+                    <div class="swiper-container third">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://image.ibb.co/epGmgU/3561394be07fec4d3c17a9ceefb5813a.png"
+                                     alt="slide-1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://image.ibb.co/epGmgU/3561394be07fec4d3c17a9ceefb5813a.png"
+                                     alt="slide-1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://image.ibb.co/epGmgU/3561394be07fec4d3c17a9ceefb5813a.png"
+                                     alt="slide-1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://image.ibb.co/epGmgU/3561394be07fec4d3c17a9ceefb5813a.png"
+                                     alt="slide-1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev btnP-3" style="">Previous</div>
+                    <div class="swiper-button-next btnN-4">/ Next</div>
+                </div>
+                <div id="s2">
+                    <div class="swiper-container third">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://image.ibb.co/eaPUMK/70656081d0e6a34e553cdbae9b216312.png"
+                                     alt="slide-1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://image.ibb.co/eaPUMK/70656081d0e6a34e553cdbae9b216312.png"
+                                     alt="slide-1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://image.ibb.co/eaPUMK/70656081d0e6a34e553cdbae9b216312.png"
+                                     alt="slide-1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://image.ibb.co/eaPUMK/70656081d0e6a34e553cdbae9b216312.png"
+                                     alt="slide-1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev btnP-3" style="">Previous</div>
+                    <div class="swiper-button-next btnN-4">/ Next</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="web-container">
+        <div class="details">
+            <div class="details-title">
+                <h1>More Details</h1>
+                <hr>
+            </div>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Mobile Number">
+            <div class="btn-div">
+                <a href="#" class="details-submit">Submit</a>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="hr-footer">
+<!--F O O T E R-->
+<div class="web-container footer">
+    <div class="row">
+        <div class="f1">
+            <img src="https://image.ibb.co/gaAJuT/Group_973.png" alt="logo">
+        </div>
+        <div class="f2">
+            <h4>OUR LOCATION</h4>
+            <hr>
+            <p>KVRD. California 34 Tesla, Ste 100 Irvine, Ca, USA 9261</p>
+        </div>
+        <div class="f3">
+            <h4>EMAIL US</h4>
+            <hr>
+            <a href="#">kvrd@wearekvrd.com</a>
+        </div>
+        <div class="f4">
+            <h4>FOR NEWSLETTER</h4>
+            <hr>
+            <div class="input-group newsletter">
+                <input type="search" placeholder="your email">
+                <span class="input-group-btn">
+<button type="button"><i class="fas fa-arrow-right"></i></button>
+</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="last-part">
+    <div class="web-container">
+        <div class="text-left">
+            <span>© 2018 Envoy. All Rights Reserved.</span>
+        </div>
+        <div class="text-right-icons">
+            <a href="https://www.facebook.com/" class="icon-links"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://twitter.com/login?lang=en" class="icon-links"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/?hl=en" class="icon-links"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/" class="icon-links"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script src="Js/swiper.min.js"></script>
+<script src="Js/KvrdJs.js"></script>
+<script type="text/javascript">
+    var swiper3 = new Swiper('.swiper-container.third', {
+        slidesPerView: 1,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+    });
+
+    var myCenter = new google.maps.LatLng(30.0265814, 31.494887800000015);
+
+    function initialize() {
+        var mapProp = {
+            center: myCenter,
+            zoom: 10,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                position: google.maps.ControlPosition.TOP_CENTER
+            },
+            mapTypeControl: false,
+            fullscreenControl: false,
+            zoomControl: false,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        var marker = new google.maps.Marker({
+            position: myCenter,
+        });
+        marker.setMap(map);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+    (function () {
+        var support = {transitions: Modernizr.csstransitions},
+            // transition end event name
+            transEndEventNames = {
+                'WebkitTransition': 'webkitTransitionEnd',
+                'MozTransition': 'transitionend',
+                'OTransition': 'oTransitionEnd',
+                'msTransition': 'MSTransitionEnd',
+                'transition': 'transitionend'
+            },
+            transEndEventName = transEndEventNames[Modernizr.prefixed('transition')],
+            onEndTransition = function (el, callback) {
+                var onEndCallbackFn = function (ev) {
+                    if (support.transitions) {
+                        if (ev.target != this) return;
+                        this.removeEventListener(transEndEventName, onEndCallbackFn);
+                    }
+                    if (callback && typeof callback === 'function') {
+                        callback.call(this);
+                    }
+                };
+                if (support.transitions) {
+                    el.addEventListener(transEndEventName, onEndCallbackFn);
+                }
+                else {
+                    onEndCallbackFn();
+                }
+            };
+    })();
+
+</script>
+</body>
+</html>

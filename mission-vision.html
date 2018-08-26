@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mission and Vision</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="Styles/bootstrap.min.css">
+    <link rel="stylesheet" href="Js/bootstrap.min.js">
+    <link rel="stylesheet" href="Styles/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+    <script src="Js/jquery.min.js"></script>
+    <link rel='dns-prefetch' href='//maps.googleapis.com'/>
+    <link rel='dns-prefetch' href='//maps.googleapis.com'/>
+    <script type='text/javascript'
+            src='https://maps.googleapis.com/maps/api/js?libraries=places%2Cgeometry&#038;v=3.exp&#038;key=AIzaSyA1hilSN_ofajUQZwnvQyZHU6ylNIE5K4Y&#038;ver=4.9.5'></script>
+    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCdbNGZNxXWApXH7VKPXkfE2tSqV4tYZ9o"
+            async="" defer="defer"></script>
+    <link rel="stylesheet" href="Styles/KCRD-rest.css">
+    <link rel="stylesheet" href="Styles/KvrdCss.css">
+</head>
+<body>
+<div class="header">
+    <div id="close" class="close-bar">
+        <img src="https://image.ibb.co/m5HFiz/Group_1000.png" alt="logo" class="close-img"
+             style="margin: 10px 0px 10px 20px">
+        <a href="javascript:void(0)" class="sandwich-icon float-right" onclick="myFunction(this)"><i
+                class="fas fa-align-justify"></i></a>
+    </div>
+    <!--N A V B A R:I C O N S-->
+    <div class="web-container">
+        <div class="icons">
+            <div class="row justify-content-end">
+                <div>
+                    <a href="https://www.facebook.com/" class="icons-links"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/login?lang=en" class="icons-links"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/?hl=en" class="icons-links"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/" class="icons-links"><i class="fab fa-linkedin"></i></a>
+                    <span class="separator">|</span>
+                    <a href="#" class="pic"><img src="https://image.ibb.co/js0U18/Path_900.png"></a>
+                    <a href="#" class="text">LIVE CHAT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="separator separator2">
+    <div class="web-container">
+        <div class="navbar-collection" style="height:60px">
+            <div class="logo">
+                <img src="https://image.ibb.co/gaAJuT/Group_973.png" alt="logo"/>
+            </div>
+            <div class="nav-left">
+                <ul class="list">
+                    <li class="link-items hover-item"><a href="#" class="tabs">KVRD</a></li>
+                    <li class="link-items hover-item position-relative open-tip">
+                        <a href="#" class="tabs tool-tip">
+                            OUR PROJECTS
+                        </a>
+                        <div class="ul-parent">
+                            <ul class="tool-tiptext">
+                                <li class="tool-1"><a href="#">Commercial</a></li>
+                                <hr>
+                                <li class="tool-2"><a href="#">Residential</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="link-items hover-item"><a href="#" class="tabs">MEDIA CENTER</a></li>
+                    <li class="link-items hover-item"><a href="#" class="tabs">CAREERS</a></li>
+                    <li class="link-items hover-item"><a href="#" class="tabs">CONTACT US</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <input type="text" placeholder="Search" class="search-paragraph">
+                <button class="search-icon" type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--S A  N D W  I C H    O P E N-->
+<div class="sandwich-open" id="s-open" style="display: none">
+    <ul>
+        <li style="padding:10px 20px;">
+            <ul>
+                <li class="icon-list-left">
+                    <a href="https://www.facebook.com/" class="icon-links"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/login?lang=en" class="icon-links"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/?hl=en" class="icon-links"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/" class="icon-links"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li class="icon-list-right">
+                    <a href="#" class="resp-pic"><img src="https://image.ibb.co/js0U18/Path_900.png"></a>
+                    <a href="#" class="text">LIVE CHAT</a>
+                </li>
+
+            </ul>
+        </li>
+        <hr>
+        <li>
+            <input type="text" placeholder="Search" class="resp-search">
+            <button type="button" style="margin-top: 18px"><i class="fas fa-search"></i></button>
+            <hr>
+        </li>
+        <li style="padding:10px 20px;">
+            <a href="#" class="icon-links">KVRD</a>
+            <span class="float-right"  onclick="showDropdown(this)"><i class="fas fa-angle-down"></i></span>
+            <ul class="kvrd" id="kvrd" style=" display: none;">
+                <li><a href="#" class="kvrd-tab">Our Values</a></li>
+                <li><a href="#" class="kvrd-tab">The Essence Beyond</a></li>
+                <li><a href="#" class="kvrd-tab">Mission & Vision</a></li>
+                <li><a href="#" class="kvrd-tab">Story</a></li>
+            </ul>
+            <hr>
+        </li>
+        <li style="padding:10px 20px;">
+            <a href="#" class="icon-links">OUR PROJECTS</a>
+            <span class="float-right" onclick="projectsOpen(this)"><i class="fas fa-angle-down"></i></span>
+            <ul class="project" id="project" style=" display: none;">
+                <li><a href="#" class="kvrd-tab">Commercial</a></li>
+                <li><a href="#" class="kvrd-tab">Residential</a></li>
+            </ul>
+            <hr>
+        </li>
+        <li style="padding:10px 20px;">
+            <a href="#">MEDIA CENTER</a>
+            <hr>
+        </li>
+        <li style="padding:10px 20px;">
+            <a href="#">CAREERS</a>
+            <hr>
+        </li>
+        <li style="padding:10px 20px;">
+            <a href="#">CONTACT US</a>
+        </li>
+    </ul>
+</div>
+<div class="main">
+    <!--H E A D E R-->
+    <div class="project-header">
+        <img src="https://image.ibb.co/nbeKrU/shutterstock_161419331.png" alt="Header" class="img">
+        <div class="web-container">
+            <div class="div-project">
+                <p>Mission & Vision</p>
+            </div>
+        </div>
+    </div>
+    <div class="web-container mission">
+        <img src="https://image.ibb.co/kak9rU/shutterstock_339816938.png" alt="mission" style="width: 100%">
+        <div class="m-content">
+            <h5>MISSION</h5>
+            <hr>
+            <p>
+                To become a unique real estate developer, renowned for developing innovative concepts that stand out in
+                every sector, while becoming the first choice residence for our clients.
+            </p>
+        </div>
+    </div>
+    <div class="web-container mission vision">
+        <img src="https://image.ibb.co/e4LFgU/architectural_design_architecture_building_532568.png" alt="mission"
+             style="width: 100%">
+        <div class="m-content">
+            <h5>Vision</h5>
+            <hr>
+            <p>
+                Becoming Egypt’s leading influential developer that builds comprehensive and integrated communities,
+                delivering premium quality of utmost investment value.
+            </p>
+        </div>
+    </div>
+</div>
+<hr class="hr-footer hr-mission">
+<!--F O O T E R-->
+<div class="web-container footer">
+    <div class="row">
+        <div class="f1">
+            <img src="https://image.ibb.co/gaAJuT/Group_973.png" alt="logo">
+        </div>
+        <div class="f2">
+            <h4>OUR LOCATION</h4>
+            <hr>
+            <p>KVRD. California 34 Tesla, Ste 100 Irvine, Ca, USA 9261</p>
+        </div>
+        <div class="f3">
+            <h4>EMAIL US</h4>
+            <hr>
+            <a href="#">kvrd@wearekvrd.com</a>
+        </div>
+        <div class="f4">
+            <h4>FOR NEWSLETTER</h4>
+            <hr>
+            <div class="input-group newsletter">
+                <input type="search" placeholder="your email">
+                <span class="input-group-btn">
+<button type="button"><i class="fas fa-arrow-right"></i></button>
+</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="last-part">
+    <div class="web-container">
+        <div class="text-left">
+            <span>© 2018 Envoy. All Rights Reserved.</span>
+        </div>
+        <div class="text-right-icons">
+            <a href="https://www.facebook.com/" class="icon-links"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://twitter.com/login?lang=en" class="icon-links"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/?hl=en" class="icon-links"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/" class="icon-links"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script src="Js/swiper.min.js"></script>
+<script src="Js/KvrdJs.js"></script>
+<script type="text/javascript"></script>
+</body>
+</html>
